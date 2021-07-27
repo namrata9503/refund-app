@@ -1,0 +1,43 @@
+<header>
+    <div class=" bg-header-pattern h-auto -mt-72 lg:-mt-72 md:-mt-72 sm:-mt-72">
+        <div class="pt-52 lg:pt-52 md:pt-52 sm:pt-52">
+            <div class="lg:flex md:flex justify-between items-end">
+                <div *ngIf="listss" class="font-raleway lg:w-3/6 md:3/6 sm:w-11/12 lg:pl-24 md:pl-20 sm:pl-12 py-16 font-bold text-white">
+                    <h1 class="text-6xl py-8">{{listss.title}} #{{listss.id}} - {{listss.justification}}</h1>
+                    <div class="text-white my-6 z-50">
+                        <p>Name: {{listss.collaborator.name}}</p>
+                        <p>E-mail: {{listss.collaborator.email}}</p>
+                        <p>Justification: {{listss.justification}}</p>
+                        <p>Purpose: {{listss.purpose}}</p>
+                        <p>Project: {{listss.project.title}}</p>
+                        <p>Date: {{listss.createdOn | date: 'dd/MM/yyyy'}}</p>
+                        <p>Amount of People: {{listss.accountabilityExtraInfo.amountOfPeople}}</p>
+                        <p>Flag - Breakfast:
+                            <span *ngIf="!listss.accountabilityExtraInfo.budgetForBreakfast; else notNull">
+                                - 
+                          </span>
+                            <ng-template #notNull>
+                                {{listss.accountabilityExtraInfo.budgetForBreakfast}}
+                            </ng-template>
+                        </p>
+                    </div>
+                </div>
+                <div class="font-raleway font-bold lg:w-3/6 md:3/6 sm:w-11/12 lg:pr-24 md:pr-20 sm:pl-12 py:8 lg:py-16 sm:py:8">
+                    <p>Cost Center</p>
+
+                    <div *ngFor="let item of detailListData;" class="font-raleway font-bold lg:w-3/6 md:3/6 sm:w-11/12 lg:pr-24 md:pr-20 sm:pl-12 py:8 lg:py-16 sm:py:8">
+                        {{item.percentage}}% - {{item.name}}
+                        <!-- <div class="">
+                                <select name="currencies" [(ngModel)]=currency>
+                                         <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+                                </select>
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>

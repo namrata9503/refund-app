@@ -1,0 +1,74 @@
+<div class="bg-gray-100">
+    <div class="font-raleway  lg:pl-8 md:pl-8 sm:pl-8 py-8 font-bold ">
+        <div class="font-raleway font-bold  lg:pr-8 md:pr-8 sm:pl-8 py:8 lg:py-8 sm:py:8 ">
+
+            <div *ngFor="let item of timelineData;" class="flex bg-white border rounded-lg font-raleway font-bold my-4 sm:pl-8 py:8 lg:py-8 sm:py:8">
+                <div *ngIf="item.cardType === 'EVALUATION'" class="flex ">
+                    <div class="flex-row px-8">
+                        <i class="fa fa-users fa-2x text-pink-900 p-8 border rounded-full bg-purple-200"></i>
+                        <p>{{item.cardDate | date: 'dd/MM/yyyy'}}</p>
+                    </div>
+                    <div class="flex-row px-8">
+                        <p>Type</p>
+                        <p>Approval of the request {{item.author.name}}</p>
+                    </div>
+                    <div class=" px-8">
+                        <span *ngIf="!item.status; else notNull">
+                            
+                      </span>
+                        <ng-template #notNull>
+                            <p class="mb-2">Status</p>
+                            <p class="border border-green-600 rounded-full py-3 px-6 bg-green-200">Approved</p>
+                        </ng-template>
+                    </div>
+                </div>
+                <div *ngIf="item.cardType === 'ACCOUNTABILITY_CREATED' || item.cardType === 'ACCOUNTABILITY_SUBMITTED'" class="flex justify-between">
+                    <div class=" px-8">
+                        <i class="fa fa-asterisk fa-2x text-pink-900 p-8 border rounded-full bg-purple-200"></i>
+                        <p>{{item.cardDate | date: 'dd/MM/yyyy'}}</p>
+                    </div>
+                    <div class="flex-row  px-8">
+                        <p>Type</p>
+                        <p>Expenses sent for approval by {{item.author.name}}</p>
+                    </div>
+                    <div class=" px-8">
+                        <span *ngIf="!item.status; else notNull">
+                            
+                      </span>
+                        <ng-template #notNull>
+                            <p class="mb-2">Status</p>
+                            <p class="border border-green-600 rounded-full py-3 px-6 bg-green-200">Approved</p>
+                        </ng-template>
+                    </div>
+                </div>
+                <div *ngIf="item.cardType === 'EXPENSE'" class="flex justify-between">
+                    <div class=" px-8">
+                        <i class="fa fa-cutlery fa-2x text-pink-900 p-8 border rounded-full bg-purple-200"></i>
+                        <p>{{item.cardDate | date: 'dd/MM/yyyy'}}</p>
+                    </div>
+                    <div class="flex-row  px-8">
+                        <p>Type</p>
+                        <p>Hotel</p>
+                        <p>{{item.id}}</p>
+                    </div>
+                    <div class="flex-row  px-8">
+                        <p>Value</p>
+                        <p class="flex">{{item.currencySymbol}} {{item.amountTotal}}</p>
+                        <p class="text-grey-500">Grade value: {{item.currencySymbol}} 111122.22</p>
+                    </div>
+                    <div class=" px-8">
+                        <span *ngIf="!item.status; else notNull">
+                            
+                      </span>
+                        <ng-template #notNull>
+                            <p class="mb-2">Status</p>
+                            <p class="border border-green-600 rounded-full py-2 px-4 mb-2 bg-green-200">Approved</p>
+                            <p class="border border-gray-600 rounded-full py-2 px-4 bg-gray-200">Deductible</p>
+                            <p class="mt-2">Approved value: {{item.currencySymbol}} {{item.amountTotal}}</p>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
