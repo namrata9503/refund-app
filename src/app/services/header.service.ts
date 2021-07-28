@@ -7,7 +7,6 @@ import { HeaderList } from 'src/app/model/headerList';
     providedIn: 'root',
 })
 export class HeaderService {
-    apiURL = 'https://api-front-end-challenge.buildstaging.com/api/header';
 
     constructor(private http: HttpClient) { }
     /* get list from API */

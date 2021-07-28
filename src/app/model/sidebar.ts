@@ -4,11 +4,11 @@ export interface Sidebar {
 }
 
 export interface Content {
-
     returned: number,
     received: number,
     accountabilityStatus: string,
     balance: number,
+    declared: number,
     cardDate: Date,
     currency: {
         name: string,

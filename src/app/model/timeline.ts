@@ -4,7 +4,6 @@ export interface Timeline {
 }
 
 export interface Content {
-
     cardType: string,
     status: string,
     notes:string,

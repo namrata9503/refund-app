@@ -13,7 +13,6 @@ export class AddExpenseService {
     addExpense(expense: Expense): Observable<any> {
         const headers = { 'content-type': 'application/json' };
         const body = JSON.stringify(expense);
-        console.log(body);
-        return this.http.post('https://api-front-end-challenge.buildstaging.com/api/expense/add', body, { headers });
+        return this.http.post('https://api-front-end-challenge.buildstaging.com/api/expense/add', body, { headers, observe: 'response' });
     }
 }

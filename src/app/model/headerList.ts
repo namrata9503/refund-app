@@ -1,7 +1,7 @@
 export interface HeaderList {
     id: number;
     title: string;
-    justification: number;
+    justification: string;
     collaborator:{
         name: string,
         email: string,
@@ -24,4 +24,13 @@ export interface CostCenters {
 
     name: string,
     percentage: number,
+    manager:{
+        name: string,
+    },
+    reviser:{
+        name: string,
+    },
+    talentPartner:{
+        name: string,
+    }
 }
