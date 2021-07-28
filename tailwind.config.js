@@ -11,6 +11,9 @@ module.exports = {
             secondary: '#E50071',
             danger: '#e3342f',
         }),
+        cursor: {
+            'not-allowed': 'not-allowed',
+        },
         extend: {
             backgroundImage: () => ({
                 // eslint-disable-next-line max-len
@@ -28,6 +31,8 @@ module.exports = {
         extend: {
             objectFit: ['hover', 'focus'],
             backgroundImage: ['hover', 'focus', 'responsive'],
+            backgroundColor: ['disabled'],
+            cursor: ['hover', 'focus', 'disabled'],
         },
     },
     plugins: [],

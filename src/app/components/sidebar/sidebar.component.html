@@ -1,0 +1,72 @@
+<div class=" w-full">
+    <div class="font-raleway py-8 lg:py-8 sm:py:8 ">
+        <div class="font-raleway font-bold px-8 py:8 lg:py-8 sm:py:8 ">
+            <div class="flex-row justify-center text-center my-4  py-8 px-16 border rounded-lg border-green-600 bg-green-200">
+                <p>STATUS</p>
+                <p>Approved</p>
+            </div>
+            <div *ngFor="let element of sidebarData;" class="flex-row bg-white font-raleway font-bold">
+                <!-- <div class="flex-row justify-center text-center py-8 px-16 border rounded-lg border-green-600 bg-green-200">
+                    <p>STATUS</p>
+                    <p>{{element.accountabilityStatus}}</p>
+                </div> -->
+                <div class="border border-gray-400 rounded-lg my-4 p-4">
+                    <div class="justify-center text-center">
+                        <p>Balance</p>
+                        <p>{{element.currency.symbol}} {{element.balance}}</p>
+                    </div>
+                    <div class="flex justify-around divide-x text-center">
+                        <div class="text-gray-400">
+                            <div class="flex">
+                                <i style='font-size:24px' class="text-gray-400">&#xf358;</i>
+                                <div>
+                                    <p class="text-gray-400">Spending</p>
+                                    <p class="text-gray-600">{{element.returned}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-gray-400 pl-6">
+                            <div class="flex">
+                                <i style='font-size:24px' class="text-gray-400">&#xf35b;</i>
+                                <div>
+                                    <p class="text-gray-400">Has Recieved</p>
+                                    <p class="text-gray-600">{{element.received}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Extract</p>
+                        <hr class="bg-gray-600">
+                        <div class="flex">
+                            <div>
+                                <p class="text-gray-400">Description</p>
+
+                                <p>Expenses declared</p>
+                                <p class="text-gray-400">Expenses declared by the tropper</p>
+
+                                <p>Expenses approved</p>
+                                <p class="text-gray-400">Expenses approved by finance</p>
+
+                                <p>Payment made</p>
+                                <p class="text-gray-400">Payment made by finance</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Value</p>
+
+                                <p>{{element.currency.symbol}} {{element.returned}}</p>
+                                <p>&nbsp;</p>
+
+                                <p>{{element.currency.symbol}} {{element.returned}}</p>
+                                <p>&nbsp;</p>
+
+                                <p class="text-green-600">{{element.currency.symbol}} {{element.balance}}</p>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
