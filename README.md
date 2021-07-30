@@ -1,27 +1,43 @@
-# RefundApp
+# RefundApp + Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+This is a project to demonstrate an app to add expense costs that fill in form and fetch data from given APIs with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+.
+## Get started
 
-## Development server
+### Clone the repo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```shell
+https://github.com/namrata9503/refund-app.git
+cd refund-app
+```
 
-## Code scaffolding
+### Install npm packages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install the `npm` packages described in the `package.json` and verify that it works:
 
-## Build
+```shell
+npm install
+npm start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### npm scripts
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+These are the most useful commands defined in `package.json`:
 
-## Running end-to-end tests
+* `npm start` - runs the TypeScript compiler, and runs on development mode.
+* `npm run build` - build artifacts will be stored in the dist/ directory and sets up build for production.
+* `npm run lint` - runs `eslint` on the project files.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+These are the test-related scripts:
 
-## Further help
+* `npm test` - builds the application and runs unit tests.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Final UI
+
+![UI-Demo](src/assets/Demo_UI.gif)
+
+
+
+
+
