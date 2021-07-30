@@ -2,8 +2,9 @@
     <div class="font-raleway w-full py-8 font-bold ">
         <div class="font-raleway font-bold  lg:pr-8 md:pr-8 sm:pl-8 py:8 lg:py-8 sm:py:8 ">
 
-            <div *ngFor="let item of timelineData;" class="flex bg-white border rounded-lg font-raleway font-bold my-4 sm:pl-8 py:8 lg:py-8 sm:py:8">
-                <div *ngIf="item.cardType === 'EVALUATION'" class="flex ">
+            <div *ngFor="let item of timelineData;" class="flex bg-white border rounded-lg font-raleway font-bold my-4 sm:pl-8 
+            py:8 lg:py-8 md:py-8 sm:py:8">
+                <div *ngIf="item.cardType === 'EVALUATION'" class="flex">
                     <div class="flex-row px-8">
                         <i class="fa fa-users fa-2x text-pink-900 p-8 border rounded-full bg-purple-200"></i>
                         <p>{{item.cardDate | date: 'dd/MM/yyyy'}}</p>

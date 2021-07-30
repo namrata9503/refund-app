@@ -1,20 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Timeline } from 'src/app/model/timeline';
+import { Timeline } from '@model/timeline';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
     providedIn: 'root',
 })
 export class TimelineService {
 
-    apiURL = 'https://api-front-end-challenge.buildstaging.com/api/header';
+    apiURL = environment.apiURL;
 
     constructor(private http: HttpClient) { }
     /* get list from API */
     getTimeline(): Observable<any> {
         return this.http.get<Timeline[]>(
-            'https://api-front-end-challenge.buildstaging.com/api/timeline',
+            `${this.apiURL}/timeline`,
         );
     }
 }

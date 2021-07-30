@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HeaderComponent } from '@components/header/header.component';
+import { TimelineComponent } from '@components/timeline/timeline.component';
+import { SidebarComponent } from '@components/sidebar/sidebar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { TimelineComponent } from './components/timeline/timeline.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
     declarations: [

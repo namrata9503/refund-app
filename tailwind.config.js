@@ -25,6 +25,9 @@ module.exports = {
                 lato: ['Lato'],
                 garamond: ['Garamond'],
             },
+            spacing: {
+                30: '30rem',
+            },
         },
     },
     variants: {

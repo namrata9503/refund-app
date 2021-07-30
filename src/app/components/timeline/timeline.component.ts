@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Content, Timeline } from 'src/app/model/timeline';
-import { TimelineService } from 'src/app/services/timeline.service';
+import { Content, Timeline } from '@model/timeline';
+import { TimelineService } from '@services/timeline.service';
 
 @Component({
     selector: 'app-timeline',

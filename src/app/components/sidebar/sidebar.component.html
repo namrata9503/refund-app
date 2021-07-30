@@ -1,4 +1,4 @@
-<div class=" w-full">
+<div class="w-full">
     <div class="font-raleway py-8 lg:py-8 sm:py:8 ">
         <div class="font-raleway font-bold px-8 py:8 lg:py-8 sm:py:8 ">
             <div class="flex-row justify-center text-center my-4  py-8 px-16 border rounded-lg border-green-600 bg-green-200">
@@ -6,19 +6,15 @@
                 <p>Approved</p>
             </div>
             <div *ngFor="let element of sidebarData;" class="flex-row bg-white font-raleway font-bold">
-                <!-- <div class="flex-row justify-center text-center py-8 px-16 border rounded-lg border-green-600 bg-green-200">
-                    <p>STATUS</p>
-                    <p>{{element.accountabilityStatus}}</p>
-                </div> -->
                 <div class="border border-gray-400 rounded-lg my-4 p-4">
                     <div class="justify-center text-center">
                         <p>Balance</p>
                         <p>{{element.currency.symbol}} {{element.balance}}</p>
                     </div>
-                    <div class="flex justify-around divide-x text-center">
+                    <div class="flex justify-around lg:divide-x md:divide-x-0 sm:divide-x-0 text-center">
                         <div class="text-gray-400">
                             <div class="flex">
-                                <i style='font-size:24px' class="text-gray-400">&#xf358;</i>
+                                <i style='font-size:24px' class="text-gray-400 fa fa-angle-double-up"></i>&nbsp;
                                 <div>
                                     <p class="text-gray-400">Spending</p>
                                     <p class="text-gray-600">{{element.returned}}</p>
@@ -27,7 +23,7 @@
                         </div>
                         <div class="text-gray-400 pl-6">
                             <div class="flex">
-                                <i style='font-size:24px' class="text-gray-400">&#xf35b;</i>
+                                <i style='font-size:24px' class=" fa fa-angle-double-down text-gray-400"></i>&nbsp;
                                 <div>
                                     <p class="text-gray-400">Has Recieved</p>
                                     <p class="text-gray-600">{{element.received}}</p>
@@ -35,9 +31,9 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <p>Extract</p>
-                        <hr class="bg-gray-600">
+                    <div class="flex lg:flex md:flex-col sm:flex-col">
+                        <p class="">Extract</p>
+                        <hr class="bg-gray-600 lg:bg-gray-600 md:bg-gray-600 sm:bg-gray-600">
                         <div class="flex">
                             <div>
                                 <p class="text-gray-400">Description</p>

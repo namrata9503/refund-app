@@ -2,10 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Expense } from 'src/app/model/expense';
-import { HeaderList, CostCenters } from 'src/app/model/headerList';
-import { AddExpenseService } from 'src/app/services/add-expense.service';
-import { HeaderService } from 'src/app/services/header.service';
+import { Expense } from '@model/expense';
+import { HeaderList, CostCenters } from '@model/headerList';
+import { AddExpenseService } from '@services/add-expense.service';
+import { HeaderService } from '@services/header.service';
 
 @Component({
     selector: 'app-header',
